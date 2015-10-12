@@ -1,7 +1,7 @@
 #!/bin/bash
 
-DEVICE=hm2014811
-VENDOR=xiaomi
+DEVICE=MSM8916
+VENDOR=lenovo
 
 OUTDIR=vendor/$VENDOR/$DEVICE
 MAKEFILE=../../../$OUTDIR/$DEVICE-vendor-blobs.mk

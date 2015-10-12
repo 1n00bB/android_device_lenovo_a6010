@@ -17,16 +17,16 @@ FORCE_32_BIT := true
 
 -include device/cyanogen/msm8916-common/BoardConfigCommon.mk
 
-DEVICE_PATH := device/xiaomi/hm2014811
+DEVICE_PATH := device/lenovo/msm8916
 
 TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := HM2014811,HM2014812,HM2014813,HM2014814,HM2014815,HM2014816,HM2014817,HM2014818,HM2014819,HM2014820,HM2014821
+TARGET_OTA_ASSERT_DEVICE := k30-t,A6000,
 
 # Kernel
-TARGET_KERNEL_CONFIG := cyanogenmod_hm2014811_defconfig
-TARGET_KERNEL_SOURCE := kernel/xiaomi/msm8916
+TARGET_KERNEL_CONFIG := cyanogenmod_A6000_defconfig
+TARGET_KERNEL_SOURCE := kernel/lenovo/msm8916
 
 # Audio
 AUDIO_FEATURE_ENABLED_NEW_SAMPLE_RATE := true
@@ -53,7 +53,7 @@ TARGET_GPS_HAL_PATH := $(DEVICE_PATH)/gps
 TARGET_NO_RPC := true
 
 # Init
-TARGET_LIBINIT_DEFINES_FILE := $(DEVICE_PATH)/init/init_hm2014811.c
+TARGET_LIBINIT_DEFINES_FILE := $(DEVICE_PATH)/init/init_msm8916.c
 TARGET_UNIFIED_DEVICE := true
 
 # Lights
@@ -86,4 +86,4 @@ BOARD_SEPOLICY_UNION += \
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
 # inherit from the proprietary version
--include vendor/xiaomi/hm2014811/BoardConfigVendor.mk
+-include vendor/lenovo/msm8916/BoardConfigVendor.mk

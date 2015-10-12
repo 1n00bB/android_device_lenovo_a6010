@@ -1,8 +1,8 @@
 #!/bin/bash
 
 #set -e
-export DEVICE=hm2014811
-export VENDOR=xiaomi
+export DEVICE=msm8916
+export VENDOR=lenovo
 
 if [ $# -eq 0 ]; then
   SRC=adb

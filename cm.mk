@@ -12,13 +12,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-$(call inherit-product, device/xiaomi/hm2014811/full_hm2014811.mk)
+$(call inherit-product, device/lenovo/msm8916/full_msm8916.mk)
 
 # Inherit some common CM stuff.
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
-PRODUCT_NAME := cm_hm2014811
-BOARD_VENDOR := xiaomi
-PRODUCT_DEVICE := hm2014811
+PRODUCT_NAME := cm_msm8916
+BOARD_VENDOR := lenovo
+PRODUCT_DEVICE := msm8916
 
-PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+PRODUCT_GMS_CLIENTID_BASE := android-lenovo
