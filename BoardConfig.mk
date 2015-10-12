@@ -27,6 +27,7 @@ TARGET_OTA_ASSERT_DEVICE := k30-t,A6000,
 # Kernel
 TARGET_KERNEL_CONFIG := cyanogenmod_A6000_defconfig
 TARGET_KERNEL_SOURCE := kernel/lenovo/msm8916
+BOARD_KERNEL_CMDLINE := androidboot.selinux=permissive
 
 # Audio
 AUDIO_FEATURE_ENABLED_NEW_SAMPLE_RATE := true
