@@ -148,9 +148,6 @@
     <!-- Does the notification LED support multiple colors? Used to decide if the user can change the colors -->
     <bool name="config_multiColorNotificationLed">true</bool>
 
-    <!-- Is the notification LED brightness adjustable ? Used to decide if the user can set LED brightness -->
-    <bool name="config_adjustableNotificationLedBrightness">true</bool>
-
     <!-- Device configuration setting the /proc/sys/vm/extra_free_kbytes tunable in the kernel
          (if it exists).  A high value will increase the amount of memory that the kernel
          tries to keep free, reducing allocation time and causing the lowmemorykiller to kill
