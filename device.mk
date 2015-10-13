@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-$(call inherit-product-if-exists, device/lenovo/msm8916/copyfiles.mk)
+$(call inherit-product-if-exists, device/lenovo/msm8916/vendor/copyfiles.mk)
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
@@ -24,7 +24,8 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.gyroscope.xml:system/etc/permissions/android.hardware.sensor.gyroscope.xml \
     frameworks/native/data/etc/android.hardware.sensor.light.xml:system/etc/permissions/android.hardware.sensor.light.xml \
     frameworks/native/data/etc/android.hardware.sensor.proximity.xml:system/etc/permissions/android.hardware.sensor.proximity.xml \
-    frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml
+    frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
+    frameworks/av/media/libstagefright/data/media_codecs_ffmpeg.xml:system/etc/media_codecs_ffmpeg.xml
 
 # Screen density
 PRODUCT_AAPT_CONFIG := normal
@@ -46,22 +47,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_platform_info.xml:system/etc/audio_platform_info.xml \
     $(LOCAL_PATH)/audio/audio_policy.conf:system/etc/audio_policy.conf \
     $(LOCAL_PATH)/audio/mixer_paths.xml:system/etc/mixer_paths.xml
-
-# Camera
-PRODUCT_PACKAGES += \
-    camera.msm8916 \
-    libmm-qcamera
-
-# Charger
-ADDITIONAL_DEFAULT_PROPERTIES += \
-    ro.usb.vid=2717 \
-    ro.usb.id.charge=F006 \
-    ro.usb.id.mtp=ff60 \
-    ro.usb.id.mtp_adb=ff68 \
-    ro.usb.id.ptp=ff10 \
-    ro.usb.id.ptp_adb=ff18 \
-    ro.usb.id.ums=ff20 \
-    ro.usb.id.ums_adb=ff28
 
 # GPS
 PRODUCT_PACKAGES += \
@@ -104,4 +89,4 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_wlan_nv.bin:system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
 
 # Inherit the rest from msm8916-common
-$(call inherit-product, device/cyanogen/msm8916-common/msm8916.mk)
+$(call inherit-product, device/lenovo/msm8916-common/msm8916.mk)

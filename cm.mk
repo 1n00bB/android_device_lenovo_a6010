@@ -21,4 +21,5 @@ PRODUCT_NAME := cm_msm8916
 BOARD_VENDOR := lenovo
 PRODUCT_DEVICE := msm8916
 
-PRODUCT_GMS_CLIENTID_BASE := android-lenovo
+PRODUCT_GMS_CLIENTID_BASE := android-micromax
+

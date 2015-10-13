@@ -15,7 +15,7 @@
 
 FORCE_32_BIT := true
 
--include device/cyanogen/msm8916-common/BoardConfigCommon.mk
+-include device/lenovo/msm8916-common/BoardConfigCommon.mk
 
 DEVICE_PATH := device/lenovo/msm8916
 
@@ -35,19 +35,8 @@ AUDIO_FEATURE_ENABLED_NEW_SAMPLE_RATE := true
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
 
 # Camera
-BOARD_CAMERA_SENSORS := \
-    ov2680_5987fhq \
-    ov2680_skuhf \
-    ov8865_q8v18a
 TARGET_USE_VENDOR_CAMERA_EXT := true
 USE_DEVICE_SPECIFIC_CAMERA := true
-
-# Radio
-ADD_RADIO_FILES := true
-TARGET_RELEASETOOLS_EXTENSIONS := $(LOCAL_PATH)
-
-# CMHW
-BOARD_HARDWARE_CLASS += $(DEVICE_PATH)/cmhw
 
 # CPU
 TARGET_CPU_CORTEX_A53 := true
@@ -83,7 +72,8 @@ BOARD_SEPOLICY_UNION += \
     system_server.te \
     file_contexts
 
-TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
+WIFI_DRIVER_MODULE_PATH := "/system/lib/modules/wlan.ko"
+WIFI_DRIVER_MODULE_NAME := "wlan"
 
 # inherit from the proprietary version
 -include vendor/lenovo/msm8916/BoardConfigVendor.mk
