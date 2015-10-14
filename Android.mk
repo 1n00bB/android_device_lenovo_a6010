@@ -33,5 +33,10 @@ $(MODEM_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 
 ALL_DEFAULT_INSTALLED_MODULES += $(MODEM_SYMLINKS)
 
+# TWRP
+$(shell mkdir -p $(TARGET_RECOVERY_ROOT_OUT)/etc; \
+	 cp -a device/lenovo/msm8916/twrp/twrp.fstab \
+	     $(TARGET_RECOVERY_ROOT_OUT)/etc;)
+
 endif
 
