@@ -66,12 +66,6 @@ PRODUCT_PACKAGES += \
     fstab.qcom \
     init.target.rc
 
-# Sensor HAL
-PRODUCT_PACKAGES += \
-    calmodule.cfg \
-    libcalmodule_common \
-    sensors.msm8916
-
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
     $(LOCAL_PATH)/wifi/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
