@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-$(call inherit-product-if-exists, device/lenovo/msm8916/vendor/copyfiles.mk)
+$(call inherit-product-if-exists, device/lenovo/msm8916/vendor/msm8916-vendor.mk)
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
