@@ -12,17 +12,19 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-$(call inherit-product, device/lenovo/msm8916/full_msm8916.mk)
+$(call inherit-product, device/lenovo/wt86518/full_wt86518.mk)
 
 # Inherit some common CM stuff.
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
-PRODUCT_NAME := cm_msm8916
+PRODUCT_NAME := cm_wt86518
 BOARD_VENDOR := lenovo
-PRODUCT_DEVICE := msm8916
+PRODUCT_DEVICE := wt86518
 
-PRODUCT_GMS_CLIENTID_BASE := android-micromax
+PRODUCT_GMS_CLIENTID_BASE := android-lenovo
 
-TARGET_VENDOR_PRODUCT_NAME := Lenovo
-TARGET_VENDOR_DEVICE_NAME := Lenovo
-PRODUCT_BUILD_PROP_OVERRIDES += TARGET_DEVICE=Lenovo PRODUCT_NAME=Lenovo
+PRODUCT_LOCALES := in_ID en_US zh_CN
+
+TARGET_VENDOR_PRODUCT_NAME := Kraft-A6000
+TARGET_VENDOR_DEVICE_NAME := Kraft-A6000
+PRODUCT_BUILD_PROP_OVERRIDES += TARGET_DEVICE=Kraft-A6000 PRODUCT_NAME=Kraft-A6000

@@ -13,11 +13,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-LOCAL_PATH := device/lenovo/msm8916
+LOCAL_PATH := device/lenovo/wt86518
 
 TARGET_SPECIFIC_HEADER_PATH := $(LOCAL_PATH)/include
 
-TARGET_OTA_ASSERT_DEVICE := Kraft-T,K30T,K30-T,A6000,Kraft-W,Kraft-C,k30t
+TARGET_OTA_ASSERT_DEVICE := Kraft-A6000
 
 # Platform
 TARGET_BOARD_PLATFORM := msm8916
@@ -57,7 +57,7 @@ BOARD_RAMDISK_OFFSET     := 0x01000000
 BOARD_KERNEL_SEPARATED_DT := true
 BOARD_CUSTOM_BOOTIMG_MK := $(LOCAL_PATH)/mkbootimg.mk
 TARGET_USES_UNCOMPRESSED_KERNEL := true
-TARGET_KERNEL_SOURCE := kernel/lenovo/msm8916
+TARGET_KERNEL_SOURCE := kernel/lenovo/wt86518
 TARGET_KERNEL_CONFIG := cyanogenmod_wt86518_defconfig
 
 # ANT+
@@ -126,7 +126,7 @@ BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_CACHEIMAGE_PARTITION_SIZE := 67108864
 BOARD_PERSISTIMAGE_PARTITION_SIZE := 33554432
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 33554432
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2147483648
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1744830464
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 13042155008
 
 # Power
@@ -151,7 +151,7 @@ TARGET_RIL_VARIANT := caf
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
 
-BOARD_SEPOLICY_DIRS += device/lenovo/msm8916/sepolicy
+BOARD_SEPOLICY_DIRS += device/lenovo/wt86518/sepolicy
 
 BOARD_SEPOLICY_UNION += \
     usb_uicc_daemon.te \
@@ -190,4 +190,4 @@ WIFI_DRIVER_MODULE_PATH := "/system/lib/modules/wlan.ko"
 WIFI_DRIVER_MODULE_NAME := "wlan"
 
 # inherit from the proprietary version
--include vendor/lenovo/msm8916/BoardConfigVendor.mk
+-include vendor/lenovo/wt86518/BoardConfigVendor.mk

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DEVICE=msm8916
+DEVICE=wt86518
 VENDOR=lenovo
 
 OUTDIR=vendor/$VENDOR/$DEVICE
@@ -157,7 +157,7 @@ EOF
 
 LOCAL_PATH := \$(call my-dir)
 
-ifeq (\$(TARGET_DEVICE),msm8916)
+ifeq (\$(TARGET_DEVICE),wt86518)
 ifeq (\$(QCPATH),)
 
 include \$(CLEAR_VARS)
@@ -261,7 +261,7 @@ include \$(BUILD_PREBUILT)
 
 include \$(CLEAR_VARS)
 LOCAL_MODULE := libtime_genoff
-LOCAL_MODULE_OWNER := yu
+LOCAL_MODULE_OWNER := $VENDOR
 LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/libtime_genoff.so
 LOCAL_SRC_FILES_32 := proprietary/vendor/lib/libtime_genoff.so
 LOCAL_MODULE_TAGS := optional
